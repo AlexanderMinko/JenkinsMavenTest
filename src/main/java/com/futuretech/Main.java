@@ -18,7 +18,7 @@ public class Main {
         System.out.println("Hello world!");
         System.out.println("Hello again!");
         var path = Paths.get("What"); //var/jenkins_home
-//        Files.createFile(path);
-        Files.writeString(path, "test", StandardOpenOption.TRUNCATE_EXISTING);
+        Files.deleteIfExists(path);
+        Files.writeString(path, args[0]);
     }
 }
