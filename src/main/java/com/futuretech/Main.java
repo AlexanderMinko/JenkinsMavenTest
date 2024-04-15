@@ -1,9 +1,9 @@
 package com.futuretech;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.Arrays;
 
 public class Main {
@@ -17,8 +17,8 @@ public class Main {
         });
         System.out.println("Hello world!");
         System.out.println("Hello again!");
-        var path = Paths.get("/var/jenkins_home/what"); //var/jenkins_home
+        var path = Paths.get("What"); //var/jenkins_home
 //        Files.createFile(path);
-        Files.writeString(path, "test");
+        Files.writeString(path, "test", StandardOpenOption.TRUNCATE_EXISTING);
     }
 }
